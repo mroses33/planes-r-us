@@ -19,22 +19,22 @@ ActiveRecord::Schema.define(version: 2020_11_16_145613) do
     t.date "start_date"
     t.date "end_date"
     t.integer "price"
-    t.bigint "user_id", null: false
+    t.bigint "customer_id", null: false
     t.bigint "plane_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_bookings_on_customer_id"
     t.index ["plane_id"], name: "index_bookings_on_plane_id"
-    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "planes", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.integer "price"
-    t.bigint "user_id", null: false
+    t.bigint "owner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_planes_on_user_id"
+    t.index ["owner_id"], name: "index_planes_on_owner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -51,6 +51,6 @@ ActiveRecord::Schema.define(version: 2020_11_16_145613) do
   end
 
   add_foreign_key "bookings", "planes"
-  add_foreign_key "bookings", "users"
-  add_foreign_key "planes", "users"
+  add_foreign_key "bookings", "users", column: "customer_id"
+  add_foreign_key "planes", "users", column: "owner_id"
 end

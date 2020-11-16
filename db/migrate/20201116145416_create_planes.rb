@@ -4,9 +4,9 @@ class CreatePlanes < ActiveRecord::Migration[6.0]
       t.string :name
       t.text :description
       t.integer :price
-      t.references :user, null: false, foreign_key: true
-
+      t.references :owner, null: false
       t.timestamps
     end
+    add_foreign_key :planes, :users, column: :owner_id, primary_key: :id
   end
 end
