@@ -4,8 +4,10 @@
       <h1>Create a new booking</h1>
 
       <%= simple_form_for [@plane, @booking] do |f| %>
-        <%= f.date_field :start_date %>
-        <%= f.date_field :end_date %>
+        <%= f.label text="Dates From:" %>
+        <%= f.input :start_date, order: [:day, :month, :year]%>
+        <%= f.label text="Dates Until:" %>
+        <%= f.input :end_date, order: [:day, :month, :year] %>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
     </div>

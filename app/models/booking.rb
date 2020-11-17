@@ -2,11 +2,11 @@ class Booking < ApplicationRecord
   belongs_to :customer, :class_name => "User"
   belongs_to :plane
 
-  validate :overlapping
-    private
-    def overlapping
-      if Booking.where('? <  end_date and ? > start_date', self.start_date, self.end_date).any?
-        errors.add(:end_date, 'it overlaps another')
-      end
+  validate :end_date_after_start_date?
+
+  def end_date_after_start_date?
+    if end_date < start_date
+      errors.add :end_date, "must be after start date"
     end
+  end
 end
