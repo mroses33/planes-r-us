@@ -8,13 +8,13 @@ class PlanesController < ApplicationController
   end
 
   def new
-    @owner = User.find(params[:owner_id])
+    @owner = current_user.id
     @plane = Plane.new
   end
 
   def create
     @plane = Plane.new(strong_params)
-    @owner = User.find(params[:owner_id])
+    @owner = current_user
     @plane.owner = @owner
     if @plane.save
       redirect_to plane_path(@plane)
