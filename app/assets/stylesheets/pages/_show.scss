@@ -1,32 +1,39 @@
-_show.scss
-
 body {
   background-color: #a8dadc;
 }
 
-.container {
+#show-page {
   margin-top: 20px;
   color: white;
   font-family: 'Squada One', "cursive";
   background: #197278;
+  border-radius: 5px;
 }
 
-h1, h2, h3 {
+#show-name {
   font-family: 'Squada One', "cursive";
   color: #e63946;
   background-color: #f4f3ee;
   padding: 10px;
+  border-radius: 5px;
 }
 
-
-.btn-info {
-  background-color: #e63946;
-  color: white;
-  border-color: #e63946;
+#show-image {
+  border-radius: 5px;
 }
 
-.btn-info:hover {
+.button:hover {
+  text-decoration: none;
   background-color: #e63946;
   color: black;
   border-color: #e63946;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #e63946;
+  color: white;
+  border-color: #e63946;
+  margin-top: 10px;
 }
