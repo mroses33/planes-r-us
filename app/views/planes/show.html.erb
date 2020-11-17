@@ -1,5 +1,20 @@
-<h2><%= @plane.name %></h2>
-<h2><%= @plane.description %></h2>
-<h2><%= @plane.price %></h2>
+<div class = "container", id = "show-page">
 
-<%= link_to "Homepage", root_path, class: "btn btn-primary" %>
+<br>
+<h2 id="show-name"><%= @plane.name %></h2>
+<br>
+<img src="https://picsum.photos/650/300", id = "show-image">
+<br>
+<br>
+<p><%= @plane.description %></p>
+<h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
+<br>
+
+<%= link_to "Home", root_path, class: "button"%>
+<%= link_to "Back", planes_index_path, class: "button"%>
+<%= link_to "Book this plane", bookings_new_path, class: "button" %>
+<%= link_to "Edit your plane", root_path, class: "button" %>
+<br>
+<br>
+
+</div>
