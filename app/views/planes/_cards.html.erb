@@ -1,0 +1,41 @@
+<!-- <div class="card-trip">
+  <img src="https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Private jet with luxury kitchen!</h2>
+      <p>It is a plane!</p>
+    </div>
+    <h2 class="card-trip-pricing">£6000</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div> -->
+
+
+<div class="cards-list">
+    <% @planes.each do |plane| %>
+      <%= link_to plane_path(plane) do %>
+        <div class="card-trip">
+          <% if plane.photo.attached? %>
+            <div class="card_image"><%= cl_image_tag plane.photo.key, width: 250, height: 250, crop: :fill %></div>
+          <% else %>
+            <div class="card_image"><%= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div>
+          <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h2>Private jet with luxury kitchen!</h2>
+              <p>It is a plane!</p>
+            </div>
+            <h2 class="card-trip-pricing">£6000</h2>
+            <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+</div>
+
+
+<%# if plane.photo.attached? %>
+  <!-- <div class="card_image"><%#= cl_image_tag plane.photo.key, width: 250, height: 250, crop: :fill %></div> -->
+<%# else %>
+  <!-- <div class="card_image"><%#= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div> -->
+<%# end %>
