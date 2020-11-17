@@ -1,0 +1,32 @@
+_show.scss
+
+body {
+  background-color: #a8dadc;
+}
+
+.container {
+  margin-top: 20px;
+  color: white;
+  font-family: 'Squada One', "cursive";
+  background: #197278;
+}
+
+h1, h2, h3 {
+  font-family: 'Squada One', "cursive";
+  color: #e63946;
+  background-color: #f4f3ee;
+  padding: 10px;
+}
+
+
+.btn-info {
+  background-color: #e63946;
+  color: white;
+  border-color: #e63946;
+}
+
+.btn-info:hover {
+  background-color: #e63946;
+  color: black;
+  border-color: #e63946;
+}
