@@ -5,7 +5,8 @@ class Booking < ApplicationRecord
   validate :overlapping
     private
     def overlapping
-    if Booking.where('? <  end_date and ? > start_date', self.start_date, self.end_date).any?
+      if Booking.where('? <  end_date and ? > start_date', self.start_date, self.end_date).any?
         errors.add(:end_date, 'it overlaps another')
-  end
+      end
+    end
 end
