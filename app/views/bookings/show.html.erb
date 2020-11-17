@@ -13,14 +13,12 @@
             <th>Plane</th>
             <th>Paid</th>
           </thead>
-          <% @booking.each do |booking| %>
             <tr>
-              <td><%= booking.start_date %></td>
-              <td><%= booking.end_date %></td>
-              <td><%= booking.plane %></td>
-              <td><%= booking.price %></td>
+              <td><%= @booking.start_date %></td>
+              <td><%= @booking.end_date %></td>
+              <td><%= @booking.plane.name %></td>
+              <td><%= @booking.price %></td>
             </tr>
-          <% end %>
         </tbody>
       </table>
     </div>

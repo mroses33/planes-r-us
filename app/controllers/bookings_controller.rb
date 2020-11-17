@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings = Booking.all
   end
@@ -15,20 +16,21 @@ class BookingsController < ApplicationController
 
   def create
     @plane = Plane.find(params[:plane_id])
+    @customer = current_user
     @booking = Booking.new(booking_params)
-    @customer = User.find(params[:customer_id])
     @booking.plane = @plane
     @booking.customer = @customer
     if @booking.save
-      redirect_to plane_path(@plane)
+      render :show
     else
-      render "booking/new"
+      render :new
     end
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :price, :customer_id, :plane_id)
+    params.require(:booking).permit(:start_date, :end_date, :customer_id, :plane_id)
   end
+
 end
