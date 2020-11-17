@@ -1,4 +1,4 @@
-require 'JSON'
+require 'json'
 require 'open-uri'
 
 class PlanesController < ApplicationController
@@ -34,8 +34,8 @@ class PlanesController < ApplicationController
   end
 
   def address_info
-    url = "https://api.getAddress.io/find/#{strong_params[:postcode]}/#{strong_params[:address_number]}?api-key=#{ENV['api_key']}"
-    text = JSON.parse(open(url).read)
+    url = "https://api.getAddress.io/find/#{@plane.postcode}/#{@plane.address_number}?api-key=#{ENV['api_key']}"
+    text = JSON.parse(open(URI.encode(url)).read)
     @latitude = text["latitude"]
     @longitude = text["longitude"]
   end
