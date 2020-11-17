@@ -1,3 +1,6 @@
+require 'JSON'
+require 'open-uri'
+
 class PlanesController < ApplicationController
   def index
     @planes = Plane.all
@@ -26,6 +29,10 @@ class PlanesController < ApplicationController
   private
 
   def strong_params
-    params.require(:plane).permit(:name, :description, :price)
+    params.require(:plane).permit(:name, :description, :price, :postcode, :address_number)
+  end
+
+  def address_info
+    url = https://api.getAddress.io/find/{postcode}/{house}
   end
 end
