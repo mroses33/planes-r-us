@@ -8,7 +8,7 @@ class PlanesController < ApplicationController
   end
 
   def new
-    @owner = current_user.id
+    @owner = current_user
     @plane = Plane.new
   end
 
