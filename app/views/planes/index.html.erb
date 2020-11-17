@@ -1,7 +1,1 @@
-<h1>Planes</h1>
-<% @planes.each do |plane| %>
-  <h2><%= plane.name %></h2>
-  <p><%= link_to "See this plane", plane_path(plane) %></p>
-<%end%>
-
-<%= link_to "add plane", new_plane_path, class: "btn btn-primary" %>
+<%= render "cards" %>
