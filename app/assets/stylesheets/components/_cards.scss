@@ -1,12 +1,20 @@
+.cards-list {
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.card-image > img {
   height: 200px;
-  width: 100%;
+  width: 350px;
   object-fit: cover;
 }
 
