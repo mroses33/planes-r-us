@@ -4,6 +4,7 @@ require 'open-uri'
 class PlanesController < ApplicationController
   def index
     @planes = Plane.all
+
   end
 
   def show
