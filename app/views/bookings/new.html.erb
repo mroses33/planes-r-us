@@ -1,2 +1,14 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Create a new booking</h1>
+
+      <%= simple_form_for @booking do |f| %>
+        <%= f.date_field :date_start %>
+        <%= f.date_field :date_end %>
+        <%= f.input :price %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
