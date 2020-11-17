@@ -8,6 +8,7 @@ class PlanesController < ApplicationController
 
   def show
     @plane = Plane.find(params[:id])
+    address_info
   end
 
   def new
@@ -33,6 +34,9 @@ class PlanesController < ApplicationController
   end
 
   def address_info
-    url = https://api.getAddress.io/find/{postcode}/{house}
+    url = "https://api.getAddress.io/find/#{strong_params[:postcode]}/#{strong_params[:address_number]}?api-key=#{ENV['api_key']}"
+    text = JSON.parse(open(url).read)
+    @latitude = text["latitude"]
+    @longitude = text["longitude"]
   end
 end
