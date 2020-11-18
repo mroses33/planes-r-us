@@ -34,6 +34,9 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 
+# Cloud media control online library
+gem 'cloudinary', '~> 1.16.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'

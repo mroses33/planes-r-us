@@ -4,8 +4,9 @@
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.input :postcode %>
+  <%= f.input :address_number %>
   <%= f.input :address %>
-<!--   <%= f.input :postcode %>
-  <%= f.input :address_number %> -->
   <%= f.submit %>
 <% end %>
