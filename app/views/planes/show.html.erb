@@ -8,7 +8,13 @@
 <%= render "carousel" %>
 <!-- <img src="https://picsum.photos/650/300", id = "show-image"> -->
 <br>
-<%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill %>
+
+<% if @plane.photo.attached? %>
+  <div class="card_image"><<%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill %></div>
+<% else %>
+  <div class="card_image"><%= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div>
+<% end %>
+
 <div class="info-box d-flex mt-4 justify-content-between">
   <div class="description">
     <p><%= @plane.description %></p>
