@@ -1,11 +1,11 @@
 class BookingsController < ApplicationController
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def show
-    @plane = Plane.find(params[:plane_id])
+    @plane = Plane.find(params[:id])
     @booking = Booking.new
   end
 

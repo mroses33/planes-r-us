@@ -26,7 +26,7 @@
 <div class="buttons">
   <%= link_to "Home", root_path, class: "button"%>
   <%= link_to "Back", planes_index_path, class: "button"%>
-  <%= link_to "Book this plane", bookings_new_path, class: "button" %>
+  <%= link_to "Book this plane", new_plane_booking_path(@plane), class: "button" %>
   <%= link_to "Edit your plane", root_path, class: "button" %>
 </div>
 <br>
