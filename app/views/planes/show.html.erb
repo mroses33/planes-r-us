@@ -1,20 +1,31 @@
+
 <div class = "container", id = "show-page">
+<br>
+<div class="title">
+  <h2 id="show-name"><%= @plane.name %></h2>
+</div>
+<br>
+<%= render "carousel" %>
+<!-- <img src="https://picsum.photos/650/300", id = "show-image"> -->
+<br>
+<div class="info-box d-flex mt-4 justify-content-between">
+  <div class="description">
+    <p><%= @plane.description %></p>
+    <h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
+    <br>
+  </div>
+  <%= render "map" %>
+</div>
+<div class="buttons">
+  <%= link_to "Home", root_path, class: "button"%>
+  <%= link_to "Back", planes_index_path, class: "button"%>
+  <%= link_to "Book this plane", bookings_new_path, class: "button" %>
+  <%= link_to "Edit your plane", root_path, class: "button" %>
 
-<br>
-<h2 id="show-name"><%= @plane.name %></h2>
-<br>
-<img src="https://picsum.photos/650/300", id = "show-image">
-<br>
-<br>
-<p><%= @plane.description %></p>
-<h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
-<br>
-
-<%= link_to "Home", root_path, class: "button"%>
-<%= link_to "Back", planes_index_path, class: "button"%>
-<%= link_to "Book this plane", bookings_new_path, class: "button" %>
-<%= link_to "Edit your plane", root_path, class: "button" %>
+</div>
 <br>
 <br>
 
 </div>
+
+
