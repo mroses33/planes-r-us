@@ -29,6 +29,7 @@ gem 'devise'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem "figaro"
 gem 'geocoder'
+gem 'faker'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
