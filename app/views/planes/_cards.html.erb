@@ -2,7 +2,11 @@
     <% @planes.each do |plane| %>
       <%= link_to plane_path(plane) do %>
         <div class="card-trip">
-            <div class="card-image"><%= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div>
+            <% if plane.photo.attached? %>
+              <div class="card_image"><%= cl_image_tag plane.photo.key, width: 350, height: 200, crop: :fill %></div>
+            <% else %>
+              <div class="card-image"><%= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div>
+            <% end %>
           <div class="card-trip-infos">
             <div>
               <h2> <%= plane.name %> </h2>

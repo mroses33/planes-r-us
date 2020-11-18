@@ -8,7 +8,8 @@
 <%= render "carousel" %>
 <!-- <img src="https://picsum.photos/650/300", id = "show-image"> -->
 <br>
-<%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill %>
+
+
 <div class="info-box d-flex mt-4 justify-content-between">
   <div class="description">
     <p><%= @plane.description %></p>
@@ -27,5 +28,6 @@
 <br>
 
 </div>
+
 
 
