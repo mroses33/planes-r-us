@@ -5,12 +5,12 @@
     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
   </ol>
 
-  <div class="carousel-inner">
+  <div class="carousel-inner" id="carouselb-inner">
     <% @planes.each_with_index do |plane, i| %>
     <div class="carousel-item <%= "active " if i==0 %>">
       <img src="https://picsum.photos/200/300" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5><%= link_to plane.name, plane_path(plane)  %></h5>
+        <h5><p class="carousellink"><%= link_to plane.name, plane_path(plane)  %></p></h5>
       </div>
     </div>
     <% end %>
