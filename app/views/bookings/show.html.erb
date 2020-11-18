@@ -1,14 +1,13 @@
-<div class="container">
+<div class="container" id="show-page">
 
   <%= link_to "Back", root_path %>
 
   <div class="row">
-    <div class="col-sm-12 col-md-6">
-      <h3>Booking plane <%= @booking.plane.name %></h3>
+    <div class="col-sm-12 col-md-6 col-lg-12">
+      <h2 id="show-name">Booking plane <%=  @booking.plane.name %></h2>
       <table class="table table-bordered">
         <tbody>
           <thead>
-            head>
             <th>Ref.N.</th>
             <th>Start Date</th>
             <th>End Date</th>
@@ -18,7 +17,7 @@
               <td><%= @booking.id %></td>
               <td><%= @booking.start_date %></td>
               <td><%= @booking.end_date %></td>
-              <td><%= @booking.price %></td>
+              <td><%= @booking.plane.price %></td>
             </tr>
         </tbody>
       </table>

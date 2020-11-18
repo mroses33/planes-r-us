@@ -7,6 +7,10 @@ class BookingsController < ApplicationController
   def show
     @plane = Plane.find(params[:id])
     @booking = Booking.new
+
+    @days = @end_date.to_i - @start_date.to_i
+    @price = days * @plane.price
+    @booking.plane.price = @price
   end
 
   def new

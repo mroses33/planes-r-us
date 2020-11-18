@@ -1,7 +1,9 @@
+  <div class="container" id="show-page">
+
   <%= link_to "Back", root_path %>
 
   <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-6 col-lg-12">
       <h3>Bookings</h3>
       <table class="table table-bordered">
         <tbody>
@@ -17,7 +19,7 @@
               <td><%= booking.id %></td>
               <td><%= booking.start_date %></td>
               <td><%= booking.end_date %></td>
-              <td><%= booking.price %></td>
+              <td><%= booking.plane.price %></td>
             </tr>
           <% end %>
         </tbody>
@@ -25,4 +27,4 @@
     </div>
   </div>
 </div>
-
+</div>
