@@ -4,19 +4,20 @@
 
   <div class="row">
     <div class="col-sm-12 col-md-6">
-      <h3>Booking</h3>
+      <h3>Booking plane <%= @booking.plane.name %></h3>
       <table class="table table-bordered">
         <tbody>
           <thead>
+            head>
+            <th>Ref.N.</th>
             <th>Start Date</th>
             <th>End Date</th>
-            <th>Plane</th>
             <th>Paid</th>
           </thead>
             <tr>
+              <td><%= @booking.id %></td>
               <td><%= @booking.start_date %></td>
               <td><%= @booking.end_date %></td>
-              <td><%= @booking.plane.name %></td>
               <td><%= @booking.price %></td>
             </tr>
         </tbody>
@@ -24,3 +25,4 @@
     </div>
   </div>
 </div>
+

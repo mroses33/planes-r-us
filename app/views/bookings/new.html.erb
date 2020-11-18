@@ -5,7 +5,7 @@
 
       <%= simple_form_for [@plane, @booking] do |f| %>
         <%= f.label text="Dates From:" %>
-        <%= f.input :start_date, order: [:day, :month, :year]%>
+        <%= f.input :start_date, order: [:day, :month, :year] %>
         <%= f.label text="Dates Until:" %>
         <%= f.input :end_date, order: [:day, :month, :year] %>
         <%= f.button :submit, class: 'btn btn-primary' %>
