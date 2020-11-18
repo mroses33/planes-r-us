@@ -5,12 +5,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @plane = Plane.find(params[:id])
-    @booking = Booking.new
-
-    @days = @end_date.to_i - @start_date.to_i
-    @price = days * @plane.price
-    @booking.plane.price = @price
+    @booking = Booking.find(params[:id])
   end
 
   def new
@@ -24,6 +19,10 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.plane = @plane
     @booking.customer = @customer
+
+    @days = (@booking.end_date - @booking.start_date).to_i
+    @price = @days * @booking.plane.price
+    @booking.plane.price = @price > 0 ? @price : @booking.plane.price
     if @booking.save
       render :show
     else
