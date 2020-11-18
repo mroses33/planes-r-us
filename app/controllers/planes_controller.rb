@@ -8,7 +8,7 @@ class PlanesController < ApplicationController
     @markers = @planes.geocoded.map do |plane|
       {
         lat: plane.latitude,
-        lng: plant.longitude
+        lng: plane.longitude
       }
     end
   end
