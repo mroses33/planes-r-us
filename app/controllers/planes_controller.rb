@@ -1,10 +1,15 @@
+require 'json'
+require 'open-uri'
+
 class PlanesController < ApplicationController
   def index
     @planes = Plane.all
+
   end
 
   def show
     @plane = Plane.find(params[:id])
+    # address_info
   end
 
   def new
@@ -26,6 +31,13 @@ class PlanesController < ApplicationController
   private
 
   def strong_params
-    params.require(:plane).permit(:name, :description, :price, :photo)
+    params.require(:plane).permit(:name, :description, :price, :photo, :postcode, :address_number)
   end
+
+  # def address_info
+  #   url = "https://api.getAddress.io/find/#{@plane.postcode}/#{@plane.address_number}?api-key=#{ENV['api_key']}"
+  #   text = JSON.parse(open(URI.encode(url)).read)
+  #   @latitude = text["latitude"]
+  #   @longitude = text["longitude"]
+  # end
 end

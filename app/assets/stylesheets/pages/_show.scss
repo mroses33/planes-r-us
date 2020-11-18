@@ -8,6 +8,7 @@
   font-family: 'Squada One', "cursive";
   background: #197278;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 #show-name {
@@ -20,6 +21,8 @@
 
 #show-image {
   border-radius: 5px;
+  max-width:100%;
+  max-height:100%;
 }
 
 .button:hover {

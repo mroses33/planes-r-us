@@ -1,0 +1,25 @@
+img {
+  border-radius: 5px;
+  height: 200px;
+}
+
+#carouselExampleCaptions {
+  padding: 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+#carousel-id {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: pink;
+  text-decoration: none;
+}
