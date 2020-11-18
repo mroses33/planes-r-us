@@ -9,6 +9,7 @@
 <p><%= @plane.description %></p>
 <h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
 <br>
+<%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill %>
 
 <%= link_to "Home", root_path, class: "button"%>
 <%= link_to "Back", planes_index_path, class: "button"%>
