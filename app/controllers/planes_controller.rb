@@ -5,6 +5,12 @@ class PlanesController < ApplicationController
   def index
     @planes = Plane.all
 
+    @markers = @planes.geocoded.map do |plane|
+      {
+        lat: plane.latitude,
+        lng: plane.longitude
+      }
+    end
   end
 
   def show
@@ -31,7 +37,7 @@ class PlanesController < ApplicationController
   private
 
   def strong_params
-    params.require(:plane).permit(:name, :description, :price, :postcode, :address_number)
+    params.require(:plane).permit(:name, :description, :price, :photo, :postcode, :address_number)
   end
 
   # def address_info

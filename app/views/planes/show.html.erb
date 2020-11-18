@@ -8,6 +8,7 @@
 <%= render "carousel" %>
 <!-- <img src="https://picsum.photos/650/300", id = "show-image"> -->
 <br>
+<%= cl_image_tag @plane.photo.key, height: 300, width: 400, crop: :fill %>
 <div class="info-box d-flex mt-4 justify-content-between">
   <div class="description">
     <p><%= @plane.description %></p>
@@ -21,7 +22,6 @@
   <%= link_to "Back", planes_index_path, class: "button"%>
   <%= link_to "Book this plane", bookings_new_path, class: "button" %>
   <%= link_to "Edit your plane", root_path, class: "button" %>
-
 </div>
 <br>
 <br>
