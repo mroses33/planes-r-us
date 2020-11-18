@@ -5,6 +5,12 @@ class PlanesController < ApplicationController
   def index
     @planes = Plane.all
 
+    @markers = @planes.geocoded.map do |plane|
+      {
+        lat: plane.latitude,
+        lng: plant.longitude
+      }
+    end
   end
 
   def show
