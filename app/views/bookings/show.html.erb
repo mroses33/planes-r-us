@@ -1,7 +1,9 @@
 <div class="container" id="show-page">
 
-  <%= link_to "Back", root_path %>
-
+  <p><%= link_to "Back", root_path %></p>
+  <br>
+  <p><%= link_to "All your bookings", user_path(current_user.id) %></p>
+  <br>
   <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-12">
       <h2 id="show-name">Booking plane <%=  @booking.plane.name %></h2>
