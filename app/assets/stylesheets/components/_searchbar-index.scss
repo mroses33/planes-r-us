@@ -1,7 +1,4 @@
 
-.index-form {
-
-}
 .btn-primary {
   background-color: $pink;
   border-color: $pink;
@@ -11,7 +8,7 @@
 @media (min-width: 576px) {
   .form-inline .form-control {
       display: inline-block;
-      width: 250px;
+      width: 320px;
       vertical-align: middle;
       border: 1px $pink solid;
       box-shadow: 0 0 15px $transparent-pink;
