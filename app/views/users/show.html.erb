@@ -1,24 +1,11 @@
 <div class ="user-page">
   <div class="user-page-body">
-    <h1>Welcome <%= @user.name %></h1>
-    <p> Account holder email: <%= @user.email %></p>
+    <h1>Welcome <italic> <%= @user.email %><italic></h1>
     <br>
     <p> Your planes: </p>
-
-
-<!-- select all from planes where owner_id = current_user.id?
- -->
     <%= render "cardsx" %>
     <br>
     <p> Your bookings: </p>
-    <% @bookings.each do |booking| %>
-    ✈ Booking id: <%= booking.id %> ✈
-    Plane: <%= booking.plane.name %> ✈
-    Start date: <%= booking.start_date %> ✈
-    End date: <%= booking.end_date %> ✈
-    Plane price: <%= booking.plane.price %> ✈
-    <br>
-    <% end %>
-    <br>
+    <%= render "bookingscard" %>
   </div>
 </div>
