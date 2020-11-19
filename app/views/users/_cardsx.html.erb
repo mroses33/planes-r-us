@@ -11,7 +11,7 @@
           <div class="card-trip-infos">
             <div>
               <h2> ✈ <%= plane.name %> </h2>
-              <p><%= plane.description.truncate(50) %></p>
+              <p><%= link_to "edit your plane", edit_plane_path %></p>
             </div>
             <h2 class="card-trip-pricing"> £<%= plane.price %>  </h2>
             <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->

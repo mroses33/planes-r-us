@@ -33,10 +33,26 @@ class PlanesController < ApplicationController
     @owner = current_user
     @plane.owner = @owner
     if @plane.save
-      redirect_to plane_path(@plane)
+      redirect_to user_path
     else
       render :new
     end
+  end
+
+  def edit
+    @plane = Plane.find(params[:id])
+  end
+
+  def update
+    @plane = Plane.find(params[:id])
+    @plane.update(strong_params)
+    redirect_to plane_path(@plane)
+  end
+
+  def destroy
+    plane = Plane.find(params[:id])
+    plane.destroy
+    redirect_to planes_path
   end
 
   private

@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 offset-sm-2 ">
+        <div class="form-login">
+          <h1>Edit your plane</h1>
+          <%= simple_form_for @plane do |f| %>
+            <%= f.input :name %>
+            <%= f.input :description %>
+            <%= f.input :price %>
+            <%= f.input :address %>
+            <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+            <div class="form-actions">
+            <%= f.submit %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
