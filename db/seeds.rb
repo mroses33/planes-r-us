@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Plane.create(
+  name: Faker::Movies::StarWars.vehicle,
+  description: Faker::Movies::StarWars.quote,
+  owner_id: 1,
+  photo:
+  )

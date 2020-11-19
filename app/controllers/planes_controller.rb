@@ -37,7 +37,7 @@ class PlanesController < ApplicationController
   private
 
   def strong_params
-    params.require(:plane).permit(:name, :description, :price, :photo, :postcode, :address_number)
+    params.require(:plane).permit(:name, :description, :price, :address, photos: [])
   end
 
   # def address_info
