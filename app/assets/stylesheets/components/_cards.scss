@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  color: black;
 }
 
 .cards-list a {
@@ -63,4 +64,19 @@
 
 .card-trip-infos:hover {
   text-decoration: none;
+}
+
+.green-paid {
+  color: #008000;
+}
+
+#already_booked {
+  background-color: #b7e4c7;
+
+  opacity: 0.8;
+}
+
+#owned_planes_cards {
+  background-color: #dbe9ee;
+  opacity: 0.8;
 }
