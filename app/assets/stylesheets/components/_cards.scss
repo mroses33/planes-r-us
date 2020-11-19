@@ -6,12 +6,24 @@
   flex-wrap: wrap;
 }
 
+.cards-list a {
+  text-decoration: none;
+  color: black;
+  transition: 0.8s;
+}
+
+.cards-list a:hover {
+  opacity: 0.5;
+
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 5px;
   width: 350px;
+  border-radius: 5px;
   // height: 200px;
 }
 
