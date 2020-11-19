@@ -1,10 +1,14 @@
-<%= render "searchbar" %>
-<div class="container d-flex">
-  <%= render "cards" %>
+<div class="d-flex">
+  <div class="card-area">
+    <%= render "searchbar" %>
+    <%= render "cards" %>
+  </div>
+
 
   <div id="map"
-       style="width: 60%; height: 600px;"
+       style="width: 45%; height: 100vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['mapbox_api_key'] %>">
   </div>
+
 </div>
