@@ -3,7 +3,11 @@ require 'open-uri'
 
 class PlanesController < ApplicationController
   def index
-    @planes = Plane.all
+    if params[:search].present?
+      @planes = Plane.near(params[:search])
+    else
+      @planes = Plane.all
+    end
 
     @markers = @planes.geocoded.map do |plane|
       {
@@ -15,7 +19,6 @@ class PlanesController < ApplicationController
 
   def show
     @plane = Plane.find(params[:id])
-    # address_info
   end
 
   def new
@@ -39,11 +42,4 @@ class PlanesController < ApplicationController
   def strong_params
     params.require(:plane).permit(:name, :description, :price, :address, photos: [])
   end
-
-  # def address_info
-  #   url = "https://api.getAddress.io/find/#{@plane.postcode}/#{@plane.address_number}?api-key=#{ENV['api_key']}"
-  #   text = JSON.parse(open(URI.encode(url)).read)
-  #   @latitude = text["latitude"]
-  #   @longitude = text["longitude"]
-  # end
 end
