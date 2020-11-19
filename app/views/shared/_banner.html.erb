@@ -3,7 +3,7 @@
     <h1>Come fly with us!</h1>
     <div class="button-container">
       <%= form_tag planes_path, :method => "get" do %>
-        <%= text_field_tag :search, params[:search] %>
+        <%= text_field_tag :search_city, params[:search_city] %>
         <div class="search"></div>
       <% end %>
     </div>

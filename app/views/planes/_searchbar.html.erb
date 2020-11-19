@@ -1,0 +1,7 @@
+<div class="index-form form-inline justify-content-center m-3">
+  <%= form_tag planes_path, :method => "get" do %>
+    <%= text_field_tag :search_city, params[:search_city], class: "form-control rounded-left", placeholder: "London" %>
+    <%= text_field_tag :search_distance, params[:search_distance], class: "form-control", placeholder: "Within 5 miles" %>
+    <%= submit_tag "Search", class: "btn btn-primary"  %>
+  <% end %>
+</div>
