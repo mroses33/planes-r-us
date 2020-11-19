@@ -21,6 +21,7 @@ class PlanesController < ApplicationController
 
   def show
     @plane = Plane.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
