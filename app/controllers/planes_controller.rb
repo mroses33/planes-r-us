@@ -3,8 +3,8 @@ require 'open-uri'
 
 class PlanesController < ApplicationController
   def index
-    if params[:search].present?
-      @planes = Plane.near(params[:search])
+    if params[:search_city].present?
+      @planes = Plane.near(params[:search_city])
     else
       @planes = Plane.all
     end
