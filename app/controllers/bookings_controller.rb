@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
     if @booking.save
       render :show
     else
-      render :new
+      render "planes/show"
     end
   end
 
