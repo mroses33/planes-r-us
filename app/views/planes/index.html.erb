@@ -1,14 +1,17 @@
-<div class="d-flex">
-  <div class="card-area">
-    <%= render "searchbar" %>
-    <%= render "cards" %>
-  </div>
+<div class="container-fluid">
+  <div class="d-flex justify-content-between">
+    <div class="card-area justify-items-center flex-grow-1">
+      <%= render "searchbar" %>
+      <%= render "cards" %>
+    </div>
 
 
-  <div id="map"
-       style="width: 45%; height: 100vh;"
-       data-markers="<%= @markers.to_json %>"
-       data-mapbox-api-key="<%= ENV['mapbox_api_key'] %>">
+    <div id="map"
+         style="min-width: 400px; height: 100vh;"
+         data-markers="<%= @markers.to_json %>"
+         data-mapbox-api-key="<%= ENV['mapbox_api_key'] %>">
+    </div>
+
   </div>
 
 </div>
