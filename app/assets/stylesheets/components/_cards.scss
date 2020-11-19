@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  color: black;
 }
 
 .cards-list a {
@@ -22,14 +23,14 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 5px;
-  width: 350px;
+  width: 275px;
   border-radius: 5px;
   // height: 200px;
 }
 
 .card-image > img {
-  height: 200px;
-  width: 350px;
+  height: 160px;
+  width: 275px;
   object-fit: cover;
 }
 
@@ -63,4 +64,19 @@
 
 .card-trip-infos:hover {
   text-decoration: none;
+}
+
+.green-paid {
+  color: #008000;
+}
+
+#already_booked {
+  background-color: #b7e4c7;
+
+  opacity: 0.8;
+}
+
+#owned_planes_cards {
+  background-color: #dbe9ee;
+  opacity: 0.8;
 }

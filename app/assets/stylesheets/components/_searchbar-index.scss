@@ -1,19 +1,21 @@
 
-.index-form {
-
-}
 .btn-primary {
-  background-color: $pink;
-  border-color: $pink;
+  background-color: $red;
+  border-color: $red;
   box-shadow: 0 0 15px $transparent-pink;
 }
 
 @media (min-width: 576px) {
   .form-inline .form-control {
       display: inline-block;
-      width: 250px;
+      width: 320px;
       vertical-align: middle;
-      border: 1px $pink solid;
+      border: 1px $red solid;
       box-shadow: 0 0 15px $transparent-pink;
   }
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    background-color: $darker-pink;
+    border-color: $darker-pink; /*set the color you want here*/
 }

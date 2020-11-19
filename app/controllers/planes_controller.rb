@@ -4,9 +4,9 @@ require 'open-uri'
 class PlanesController < ApplicationController
   def index
     if params[:search_city].present? && params[:search_distance].present?
-      @planes = Plane.near(params[:search_city], params[:search_distance])
+      @planes = Plane.near(params[:search_city], params[:search_distance]).where.not(owner_id: current_user.id)
     elsif params[:search_city].present?
-      @planes = Plane.near(params[:search_city])
+      @planes = Plane.near(params[:search_city]).where.not(owner_id: current_user.id)
     else
       @planes = Plane.all
     end
@@ -21,6 +21,7 @@ class PlanesController < ApplicationController
 
   def show
     @plane = Plane.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
