@@ -1,9 +1,14 @@
 
+
+<div class ="user-page">
+  <div class="user-page-body">
+<br>
 <%= link_to "Back to Results", planes_path, class: "button mt-1"%>
 <div class = "container mt-3">
   <div class="top-container d-flex justify-content-between">
     <div class="carousel">
       <%= render :partial => 'planes/carousel' %>
+      <br>
       <div class="title d-flex justify-content-between">
         <div>
           <h3><%= @plane.name %></h3>
@@ -26,7 +31,8 @@
 
 
 <br>
-
+</div>
+</div>
 
 
 

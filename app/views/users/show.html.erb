@@ -1,12 +1,14 @@
 <div class ="user-page">
   <div class="user-page-body">
+    <br>
     <h1>Welcome <italic> <%= @user.name %><italic></h1>
+    <br>
+
+    <p> Your bookings: </p>
+    <%= render "bookingscard" %>
     <br>
     <p> Your planes: </p>
     <%= render :partial => 'planes/cards' %>
-    <br>
-    <p> Your bookings: </p>
-    <%= render "bookingscard" %>
     <br>
   </div>
 </div>
