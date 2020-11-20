@@ -1,34 +1,28 @@
 
-<div class = "container-fluid">
-  <div class="top-container d-flex">
-    <%= render :partial => 'planes/carousel' %>
-    <%= render "bookings/new", plane:@plane, booking: @booking %>
+<%= link_to "Back to Results", planes_path, class: "button mt-1"%>
+<div class = "container mt-3">
+  <div class="top-container d-flex justify-content-between">
+    <div class="carousel">
+      <%= render :partial => 'planes/carousel' %>
+      <div class="title d-flex justify-content-between">
+        <h3><%= @plane.name %></h3>
+        <h3> £<%= @plane.price %>/day </h3>
+      </div>
+      <p><%= @plane.description %></p>
+    </div>
+    <div class="booking-form">
+      <%= render "bookings/new", plane:@plane, booking: @booking %>
+    </div>
   </div>
-<!-- <div class="title">
-  <h2 id="show-name"><%#= @plane.name %></h2>
-</div> -->
+
 <br>
 
 
 <br>
 
 
-<div class="info-box d-flex mt-4 justify-content-between">
-  <div class="description">
-    <p><%= @plane.description %></p>
-    <h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
-    <br>
-  </div>
+
   <%= render :partial => 'planes/map' %>
-</div>
-<div class="buttons">
-  <%= link_to "Home", root_path, class: "button"%>
-  <%= link_to "Back", planes_path, class: "button"%>
-</div>
-<br>
-<br>
-
-</div>
 
 
 

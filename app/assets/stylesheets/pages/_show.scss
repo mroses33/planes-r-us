@@ -1,42 +1,51 @@
-// body {
-//   background-color: #a8dadc;
-// }
-
-#show-page {
-  margin-top: 20px;
-  color: white;
-  font-family: 'Squada One', "cursive";
-  background: #197278;
-  border-radius: 5px;
-  margin-bottom: 20px;
+.carousel {
+  color: $dark-gray
 }
 
-#show-name {
-  font-family: 'Squada One', "cursive";
-  color: #e63946;
-  background-color: #f4f3ee;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-#show-image {
-  border-radius: 5px;
-  max-width:100%;
-  max-height:100%;
-}
-
-.button:hover {
-  text-decoration: none;
-  background-color: #e63946;
-  color: black;
-  border-color: #e63946;
+.carousel h3 {
+  color: $dark-blue
 }
 
 .button {
-  padding: 10px;
-  border-radius: 4px;
-  background-color: #e63946;
-  color: white;
-  border-color: #e63946;
-  margin-top: 10px;
+  text-decoration: none;
+  color: $dark-gray
 }
+
+// #show-page {
+//   margin-top: 20px;
+//   color: white;
+//   font-family: 'Squada One', "cursive";
+//   background: #197278;
+//   border-radius: 5px;
+//   margin-bottom: 20px;
+// }
+
+// #show-name {
+//   font-family: 'Squada One', "cursive";
+//   color: #e63946;
+//   background-color: #f4f3ee;
+//   padding: 10px;
+//   border-radius: 5px;
+// }
+
+// #show-image {
+//   border-radius: 5px;
+//   max-width:100%;
+//   max-height:100%;
+// }
+
+// .button:hover {
+//   text-decoration: none;
+//   background-color: #e63946;
+//   color: black;
+//   border-color: #e63946;
+// }
+
+// .button {
+//   padding: 10px;
+//   border-radius: 4px;
+//   background-color: #e63946;
+//   color: white;
+//   border-color: #e63946;
+//   margin-top: 10px;
+// }
