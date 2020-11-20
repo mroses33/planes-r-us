@@ -13,7 +13,7 @@
       <br>
       <div class="title d-flex justify-content-between">
         <div>
-          <h3 id="plane-name-color"><%= @plane.name %></h3>
+          <h3><%= @plane.name %></h3>
           <div class="icons d-flex mt-4">
             <p><i class="fas fa-user-friends"></i> <%= @plane.seats %> people</p>
             <p><i class="fas fa-route"></i> <%= @plane.range %> miles</p>
@@ -22,7 +22,7 @@
         </div>
         <h3 id="plane-name-color"> £<%= @plane.price %>/day </h3>
       </div>
-      <p id="plane-name-color"><%= @plane.description %></p>
+      <p><%= @plane.description %></p>
     </div>
     <div class="booking-form">
       <%= render "bookings/new", plane:@plane, booking: @booking %>
