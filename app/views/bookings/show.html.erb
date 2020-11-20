@@ -1,12 +1,13 @@
+<div class ="user-page">
+  <div class="user-page-body">
 <div class="container" id="show-page">
-
-  <p><%= link_to "Back", root_path %></p>
   <br>
-  <p><%= link_to "All your bookings", user_path(current_user.id) %></p>
+  <br>
+  <p id="booking-page-link"> Go <%= link_to "Back to more planes", planes_path %> or <%= link_to "See all of your bookings", user_path(current_user.id) %></p>
   <br>
   <div class="row">
     <div class="col-sm-12 col-md-6 col-lg-12">
-      <h2 id="show-name">Your booking for <%=  @booking.plane.name %> was successful! </h2>
+      <h2 id="show-name">Your booking for <%=  @booking.plane.name %> was successful!  🥳 </h2>
       <table class="table table-bordered">
         <tbody>
           <thead>
@@ -25,5 +26,7 @@
       </table>
     </div>
   </div>
+  <br>
 </div>
-
+</div>
+</div>
