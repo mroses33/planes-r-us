@@ -2,16 +2,16 @@
 .btn-primary {
   background-color: $red;
   border-color: $red;
-  box-shadow: 0 0 15px $transparent-pink;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 576px) {
   .form-inline .form-control {
       display: inline-block;
-      width: 320px;
+      width: 290px;
       vertical-align: middle;
       border: 1px $red solid;
-      box-shadow: 0 0 15px $transparent-pink;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   }
 }
 
