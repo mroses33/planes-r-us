@@ -1,15 +1,9 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <h1>Create a new booking</h1>
+<div class="container" id='plane-booking-dates' data-unavailable="<%= @plane.unavailable_dates.to_json %>" >
+      <h4>Book this plane</h4>
 
       <%= simple_form_for [@plane, @booking] do |f| %>
-        <%= f.label text="Dates From:" %>
         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.label text="Dates Until:" %>
         <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}  %>
         <%= f.button :submit, class: 'btn btn-primary' %>
       <% end %>
-    </div>
-  </div>
 </div>

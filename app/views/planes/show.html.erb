@@ -1,31 +1,30 @@
 
 <div class = "container", id = "show-page">
-<br>
-<div class="title">
-  <h2 id="show-name"><%= @plane.name %></h2>
-</div>
-<br><!--
-<%= render :partial => 'planes/carousel' %>
+  <div class="show-plane">
+    <div class="title">
+      <h2 id="show-name"><%= @plane.name %></h2>
+    </div>
+<!--
+    <%= render :partial => 'planes/carousel' %>
 
 <!-- <img src="https://picsum.photos/650/300", id = "show-image"> -->
-<br>
 
 
-<div class="info-box d-flex mt-4 justify-content-between">
-  <div class="description">
-    <p><%= @plane.description %></p>
-    <h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
-    <br>
+
+    <div class="info-box d-flex mt-4 justify-content-between">
+      <div class="description">
+        <p><%= @plane.description %></p>
+        <h3 id="show-name"> £<%= @plane.price %> a day to hire </h3>
+      </div>
+      <%= render :partial => 'planes/map' %>
+    </div>
+
+    <div class="buttons">
+      <%= link_to "Home", root_path, class: "button"%>
+      <%= link_to "Back", planes_path, class: "button"%>
   </div>
-  <%= render :partial => 'planes/map' %>
-</div>
-<div class="buttons">
-  <%= link_to "Home", root_path, class: "button"%>
-  <%= link_to "Back", planes_path, class: "button"%>
-</div>
-<br>
-<br>
-<%= render "bookings/new", plane:@plane, booking: @booking %>
+  </div>
+  <%= render "bookings/new", plane:@plane, booking: @booking %>
 
 </div>
 
