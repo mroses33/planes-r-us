@@ -6,7 +6,7 @@
               <div class="carousel-inner">
                 <% @plane.photos.each_with_index do |photo, i| %>
                   <div class="carousel-item <%= "active " if i==0 %>">
-                      <%= cl_image_tag photo.key, width: 350, height: 200, crop: :fill %>
+                      <%= cl_image_tag photo.key, width: 750, height: 450, crop: :fill %>
                   </div>
                 <% end %>
               </div>
