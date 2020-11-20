@@ -5,7 +5,14 @@
     <div class="carousel">
       <%= render :partial => 'planes/carousel' %>
       <div class="title d-flex justify-content-between">
-        <h3><%= @plane.name %></h3>
+        <div>
+          <h3><%= @plane.name %></h3>
+          <div class="icons d-flex mt-4">
+            <p><i class="fas fa-user-friends"></i> <%= @plane.seats %> people</p>
+            <p><i class="fas fa-route"></i> <%= @plane.range %> miles</p>
+            <p><i class="fas fa-tachometer-alt"></i> <%= @plane.speed %> mph</p>
+          </div>
+        </div>
         <h3> £<%= @plane.price %>/day </h3>
       </div>
       <p><%= @plane.description %></p>
