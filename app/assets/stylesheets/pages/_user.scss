@@ -1,5 +1,5 @@
 .user-page {
-  margin: 70px;
+  margin: 40px;
   color: #e63946;
   font-family: 'Squada One', "cursive";
   // border: solid gray 1px;
@@ -22,6 +22,10 @@
 
 
 h2 {
+  color: #6C6EA0;
+}
+
+h4 {
   color: #6C6EA0;
 }
 
@@ -64,6 +68,18 @@ th, td {
 }
 
 
+#plane-name-color {
+  color: #e63946;
+}
 
+.top-container {
+  color: black;
+}
 
+.icons p {
+  color: #e63946;
+}
 
+.icons i {
+  color: #e63946;
+}
