@@ -13,11 +13,11 @@
               <!-- Left right -->
               <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a>
               <!-- Thumbnails -->
-              <ol class="carousel-indicators list-inline">
-                <% @plane.photos.each_with_index do |photo, i| %>
-                    <li class="list-inline-item <%= "active " if i==0 %>"> <a id="carousel-selector-<%=i%>"  data-slide-to="<%=i%>" data-target="#custCarousel"> <%= cl_image_tag photo.key, width: 350, height: 200, crop: :fill, :class => "img-fluid" %> </a> </li>
-                <% end %>
-              </ol>
+              <!-- <ol class="carousel-indicators list-inline">
+                <%# @plane.photos.each_with_index do |photo, i| %>
+                    <li class="list-inline-item <%#= "active " if i==0 %>"> <a id="carousel-selector-<%#=i%>"  data-slide-to="<%#=i%>" data-target="#custCarousel"> <%#= cl_image_tag photo.key, width: 350, height: 200, crop: :fill, :class => "img-fluid" %> </a> </li>
+                <%# end %>
+              </ol> -->
             </div>
         </div>
     </div>
