@@ -1,21 +1,28 @@
 
+
+<div class ="user-page">
+  <div class="user-page-body">
+<br>
+<p id="booking-page-link">
 <%= link_to "Back to Results", planes_path, class: "button mt-1"%>
 <div class = "container mt-3 show-page" >
+</p>
   <div class="top-container d-flex justify-content-between">
     <div class="carousel">
       <%= render :partial => 'planes/carousel' %>
+      <br>
       <div class="title d-flex justify-content-between">
         <div>
-          <h3><%= @plane.name %></h3>
+          <h3 id="plane-name-color"><%= @plane.name %></h3>
           <div class="icons d-flex mt-4">
             <p><i class="fas fa-user-friends"></i> <%= @plane.seats %> people</p>
             <p><i class="fas fa-route"></i> <%= @plane.range %> miles</p>
             <p><i class="fas fa-tachometer-alt"></i> <%= @plane.speed %> mph</p>
           </div>
         </div>
-        <h3> £<%= @plane.price %>/day </h3>
+        <h3 id="plane-name-color"> £<%= @plane.price %>/day </h3>
       </div>
-      <p><%= @plane.description %></p>
+      <p id="plane-name-color"><%= @plane.description %></p>
     </div>
     <div class="booking-form">
       <%= render "bookings/new", plane:@plane, booking: @booking %>
@@ -26,7 +33,8 @@
 
 
 <br>
-
+</div>
+</div>
 
 
 

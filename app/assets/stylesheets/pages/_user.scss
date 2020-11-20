@@ -1,11 +1,11 @@
 .user-page {
-  margin: 70px;
+  margin: 40px;
   color: #e63946;
   font-family: 'Squada One', "cursive";
   // border: solid gray 1px;
   border-radius: 10px;
   background-color: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .user-page h1 {
@@ -16,4 +16,70 @@
   margin: 20px;
 }
 
+.user-page-body a:hover {
+    text-decoration: none;
+}
 
+
+h2 {
+  color: #6C6EA0;
+}
+
+h4 {
+  color: #6C6EA0;
+}
+
+p {
+  color: #6C6EA0;
+}
+
+.dropdown-item {
+  color: #6C6EA0;
+}
+
+#booking-card-text {
+  color: black;
+}
+
+#plane-booking-dates {
+  color: #6C6EA0;
+}
+
+table {
+  color: #6C6EA0;
+}
+
+table .table-bordered {
+  color: #6C6EA0;
+}
+
+th, td {
+  color: #6C6EA0;
+}
+
+#booking-page-link a {
+  color: #e63946;
+  transition: 0.5s;
+}
+
+#booking-page-link a:hover {
+    color: #6C6EA0;
+    opacity: 0.7;
+}
+
+
+#plane-name-color {
+  color: #e63946;
+}
+
+.top-container {
+  color: black;
+}
+
+.icons p {
+  color: #e63946;
+}
+
+.icons i {
+  color: #e63946;
+}

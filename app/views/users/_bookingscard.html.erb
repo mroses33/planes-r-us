@@ -5,10 +5,10 @@
         <div class="card-trip" id = "already_booked">
           <div class="card-trip-infos">
             <div>
-              <h2> <%= booking.id %> ✈ <%= booking.plane.name%> </h2>
-              <p> 🗓 from  <%= booking.start_date %> to <%= booking.end_date %> <%= booking.plane.address %></p>
+              <h2 id="booking-card-text"> <%= booking.id %> ✈ <%= booking.plane.name%> </h2>
+              <p id="booking-card-text"> 🗓 from  <%= booking.start_date %> to <%= booking.end_date %> <%= booking.plane.address %></p>
             </div>
-            <h2 class="card-trip-pricingc">  £<%= booking.price %> <p class="green-paid"> paid ✅ </p> </h2>
+            <h2 class="card-trip-pricingc" id="booking-card-text">  £<%= booking.price %> <p class="green-paid"> paid ✅ </p> </h2>
           </div>
         </div>
     <% end %>
