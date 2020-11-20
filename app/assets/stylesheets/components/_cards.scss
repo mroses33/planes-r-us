@@ -48,17 +48,24 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  padding: 5px;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
   position: relative;
 }
 
-.card-trip-infos .card-trip-user {
+.card-trip-infos .fa {
   position: absolute;
-  right: 16px;
-  top: -20px;
+  right: -11px;
+  top: -148px;
+  width: 40px;
+}
+
+.card-trip-infos .fas {
+  position: absolute;
+  right: 15px;
+  top: -148px;
   width: 40px;
 }
 
