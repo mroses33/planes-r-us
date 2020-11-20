@@ -1,22 +1,24 @@
 
 <div class="cards-list">
-    <% @planes.each do |plane| %>
-      <%= link_to plane_path(plane) do %>
-        <div class="card-trip" id="owned_planes_cards">
-            <% if plane.photos.attached? %>
-              <div class="card_image"><%= cl_image_tag plane.photos[0].key, width: 350, height: 200, crop: :fill %></div>
-            <% else %>
-              <div class="card-image"><%= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div>
-            <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2> ✈ <%= plane.name %> </h2>
-              <p><%= link_to "edit your plane", edit_plane_path %></p>
-            </div>
-            <h2 class="card-trip-pricing"> £<%= plane.price %>  </h2>
-            <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
-          </div>
-        </div>
+  <% @planes.each do |plane| %>
+    <%= link_to plane_path(plane) do %>
+    <div class="card-trip" id="owned_planes_cards">
+      <% if plane.photos.attached? %>
+        <div class="card_image"><%= cl_image_tag plane.photos[0].key, width: 350, height: 200, crop: :fill %></div>
+      <% else %>
+        <div class="card-image"><%= image_tag 'https://media.cntraveler.com/photos/581b8e750ee23d7b457512e9/master/pass/private-jet-tarmac-GettyImages-523476302.jpg' %></div>
       <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2> ✈ <%= plane.name %> </h2>
+        </div>
+        <h2 class="card-trip-pricing"> £<%= plane.price %> per day </h2>
+        <%= link_to "edit", edit_plane_path, class: "opacity-hover" %>
+        <%= link_to plane_path(plane), method: :delete, data: { confirm: 'Are you sure? All bookings with this plane will be cancelled' }, class: 'card-remove-link' do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+      </div>
+    </div>
     <% end %>
+  <% end %>
 </div>

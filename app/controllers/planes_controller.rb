@@ -34,13 +34,14 @@ class PlanesController < ApplicationController
     @owner = current_user
     @plane.owner = @owner
     if @plane.save
-      redirect_to user_path
+      redirect_to plane_path(@plane)
     else
       render :new
     end
   end
 
   def edit
+    @owner = current_user
     @plane = Plane.find(params[:id])
   end
 
@@ -53,7 +54,7 @@ class PlanesController < ApplicationController
   def destroy
     plane = Plane.find(params[:id])
     plane.destroy
-    redirect_to planes_path
+    redirect_to user_path
   end
 
   private
