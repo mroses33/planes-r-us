@@ -22,7 +22,7 @@ class BookingsController < ApplicationController
 
     @days = (@booking.end_date - @booking.start_date).to_i
     @price = @days * @booking.plane.price
-    @booking.plane.price = @price > 0 ? @price : @booking.plane.price
+    @booking.price = @price > 0 ? @price : @booking.plane.price
     if @booking.save
       render :show
     else

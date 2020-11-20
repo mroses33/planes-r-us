@@ -11,8 +11,9 @@ class Booking < ApplicationRecord
     end
   end
 
+
   def no_reservation_overlap
-    if (Booking.where("(? BETWEEN start_date AND end_date OR ? BETWEEN start_date AND end_date) AND customer_id = ?", self.start_date, self.end_date, self.customer_id).any?)
+    if (Booking.where("(? BETWEEN start_date AND end_date OR ? BETWEEN start_date AND end_date) AND plane_id = ?", self.start_date, self.end_date, self.plane_id).any?)
       errors.add :end_date, 'is unavailable for these dates'
     end
   end
