@@ -1,7 +1,7 @@
 .user-page {
   margin: 40px;
   color: #e63946;
-  font-family: 'Squada One', "cursive";
+  font-family: $headers-font;
   // border: solid gray 1px;
   border-radius: 10px;
   background-color: white;
@@ -9,7 +9,7 @@
 }
 
 .user-page h1 {
-    font-family: 'Squada One', "cursive";
+  font-family: $headers-font;
 }
 
 .user-page-body {
@@ -69,17 +69,18 @@ th, td {
 
 
 #plane-name-color {
-  color: #e63946;
+  color: back;
 }
 
 .top-container {
   color: black;
 }
 
-.icons p {
-  color: #e63946;
+
+.carousel p {
+  font-family: $body-font;
 }
 
-.icons i {
-  color: #e63946;
+#form-color {
+  color: #6C6EA0;
 }
