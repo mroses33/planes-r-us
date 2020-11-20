@@ -1,8 +1,6 @@
 
 <div class="container" id='plane-booking-dates' data-unavailable="<%= @plane.unavailable_dates.to_json %>">
       <h4>Book now</h4>
-
-
       <%= simple_form_for [@plane, @booking] do |f| %>
         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}  %>

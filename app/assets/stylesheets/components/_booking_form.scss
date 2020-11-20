@@ -1,14 +1,19 @@
 .booking-form {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 5px;
-  padding: 5px 0;
+  padding: 15px 0;
+  position: fixed;
+  top: 95px;
+  right: 15px;
   width: 275px;
   border-radius: 5px;
   background-color: $light-gray;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  top: 0;
-  color: $dark-blue
+  color: $dark-blue;
+  height: 290px;
+}
+
+.show-page {
+  height: 100vh;
 }
 
 #form-button {
