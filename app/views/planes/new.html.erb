@@ -8,7 +8,10 @@
             <%= f.input :name %>
             <%= f.input :description %>
             <%= f.input :price %>
-            <%= f.input :address %>
+            <%= f.input :address, :label => "Location" %>
+            <%= f.input :seats, :label => "Number of Seats" %>
+            <%= f.input :speed, :label => "Max Speed" %>
+            <%= f.input :range,  :label => "Max Range (in miles)"%>
             <%= f.input :photos, as: :file, input_html: { multiple: true } %>
             <div class="form-actions">
             <%= f.button :submit, class: "btn btn-primary" %>
