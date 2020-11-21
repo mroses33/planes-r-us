@@ -13,12 +13,14 @@
               <h2 class="card-trip-pricing"> £<%= plane.price %> </h2>
             </div>
             <p><%= plane.description.truncate(40) %></p>
-            <% if plane.owner_id == current_user.id %>
-              <%= link_to edit_plane_path(plane) do %>
-                <i class="fas fa-edit"></i>
-              <% end %>
-              <%= link_to plane_path(plane), method: :delete, data: { confirm: "Are you sure?" } do %>
-                <i class="fa fa-trash destroy_plane"></i>
+            <% if current_user %>
+              <% if plane.owner_id == current_user.id %>
+                <%= link_to edit_plane_path(plane) do %>
+                  <i class="fas fa-edit"></i>
+                <% end %>
+                <%= link_to plane_path(plane), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fa fa-trash destroy_plane"></i>
+                <% end %>
               <% end %>
             <% end %>
             <!-- <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" /> -->
